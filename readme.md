@@ -8,12 +8,15 @@ Cookie Connector for Beaver Themer is an unofficial addon-plugin for the popular
 Cookie Connector also allows you to create cookies using a AJAX call. For security measures you will need to write the AJAX yourself, but an example is provided in these plugin-files in the 'example' directory.
 
 **Using the Cookie Connector**
+
 You can display the Cookie Connector wherever you'd normally insert it as a string, using either the *connect* or *insert* button.
 
 **Using the Conditional Logic filter**
+
 Because cookies have a certain validity, it can't return a value when the cookie isn't there or has become invalid. The Conditional Logic filter has an extra parameter to set a default value for whenever it doesn't return anything. Setting this parameter return that value whenever it doesn't exist.
 
 **Writing cookies**
+
 Cookies are written before any headers are written to the visitor's browser. The downside to that is that cookies can only be read when the visitor's sends a request. This means that you can't write a cookie's value and immediately read that cookies new value, within a single run of a page-call.
 
 To work around that, cookies can be written using an AJAX call. Let's consider the following html-code that is used in a HTML module:
@@ -21,6 +24,13 @@ To work around that, cookies can be written using an AJAX call. Let's consider t
     <p><a href="javascript:cookieConnector( 'setmycookie' , { cv: 'my cookie value' , valid: 3600 } );">Set cookie value</a></p>
     <p><a href="javascript:cookieConnector( 'unsetmycookie' );">Unset cookie value</a></p>
 
+The first parameter is the `actionname` that is going to be called in the PHP script, so in this example (see below) the part after 'wp_ajax_' and 'wp_ajax_nopriv_'.
+You can also add an extra, optional, third parameter `debug` that will add a console.log dump of the response, should you need to know what's being answered:
+
+    <p><a href="javascript:cookieConnector( 'setmycookie' , { cv: 'my cookie value' , valid: 3600 } , true );">Set cookie value</a></p>
+    <p><a href="javascript:cookieConnector( 'unsetmycookie', {} , true );">Unset cookie value</a></p>
+
+**Adding the PHP code to create/change/delete the cookie**
 Clicking the link wil trigger an AJAX call that will set a cookie on the visitor's device, if their browser allows it.
 
 On the server-side, you will need to add one or two ajax callbacks, depending if the call can be made without being logged in.
@@ -77,8 +87,21 @@ On the server-side, you will need to add one or two ajax callbacks, depending if
 
 It is advised to use wp_send_json with a 'success' parameter (either true or false) so that you can chain actions after sending the cookieConnector() command, for instance a reload of the page or forwarding to an url that you received from the server based on the click.
 
+    <script>
+		function cookie_trigger() {
+			jQuery.when( cookieConnector.set( 'setmycookie', { cv: jQuery( '#selectlanguage' ).val(), valid: 5 * 60 }, 1 ))
+	        .done( function( data ) {
+	            alert( data.message + '\r You can now safely shut down your browser, restart and visit this URL. This selectbox will reflect the last cookie value.' );
+	            setTimeout( function() { location.reload(); }, 1500);
+	        });
+	    }
+    </script>
+
+
 
 
 **version history**
 
 **1.0.0** Initial release (January 18th, 2019)
+
+
