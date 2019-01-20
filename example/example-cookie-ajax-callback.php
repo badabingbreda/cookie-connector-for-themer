@@ -1,9 +1,9 @@
 <?php
 
-add_action( 'wp_ajax_setlanguage' , 'set_my_cookie' );
-add_action( 'wp_ajax_nopriv_setlanguage' , 'set_my_cookie' );
-add_action( 'wp_ajax_unsetlanguage' , 'set_my_cookie' );
-add_action( 'wp_ajax_nopriv_unsetlanguage' , 'set_my_cookie' );
+add_action( 'wp_ajax_setlanguage' , 'cookie_connector_set_my_cookie' );
+add_action( 'wp_ajax_nopriv_setlanguage' , 'cookie_connector_set_my_cookie' );
+add_action( 'wp_ajax_unsetlanguage' , 'cookie_connector_set_my_cookie' );
+add_action( 'wp_ajax_nopriv_unsetlanguage' , 'cookie_connector_set_my_cookie' );
 
 
 /**
@@ -16,7 +16,7 @@ add_action( 'wp_ajax_nopriv_unsetlanguage' , 'set_my_cookie' );
  * valid (validity in seconds)
  *
  */
-function set_my_cookie() {
+function cookie_connector_set_my_cookie() {
 
 	// first check if this ajax call is
 	// done using the script belonging to the installation
