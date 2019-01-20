@@ -21,14 +21,14 @@ Cookies are written before any headers are written to the visitor's browser. The
 
 To work around that, cookies can be written using an AJAX call. Let's consider the following html-code that is used in a HTML module:
 
-    <p><a href="javascript:cookieConnector( 'setmycookie' , { cv: 'my cookie value' , valid: 3600 } );">Set cookie value</a></p>
-    <p><a href="javascript:cookieConnector( 'unsetmycookie' );">Unset cookie value</a></p>
+    <p><a href="javascript:cookieConnector.set( 'setmycookie' , { cv: 'my cookie value' , valid: 3600 } );">Set cookie value</a></p>
+    <p><a href="javascript:cookieConnector.set( 'unsetmycookie' );">Unset cookie value</a></p>
 
 The first parameter is the `actionname` that is going to be called in the PHP script, so in this example (see below) the part after 'wp_ajax_' and 'wp_ajax_nopriv_'.
 You can also add an extra, optional, third parameter `debug` that will add a console.log dump of the response, should you need to know what's being answered:
 
-    <p><a href="javascript:cookieConnector( 'setmycookie' , { cv: 'my cookie value' , valid: 3600 } , true );">Set cookie value</a></p>
-    <p><a href="javascript:cookieConnector( 'unsetmycookie', {} , true );">Unset cookie value</a></p>
+    <p><a href="javascript:cookieConnector.set( 'setmycookie' , { cv: 'my cookie value' , valid: 3600 } , true );">Set cookie value</a></p>
+    <p><a href="javascript:cookieConnector.set( 'unsetmycookie', {} , true );">Unset cookie value</a></p>
 
 **Adding the PHP code to create/change/delete the cookie**
 Clicking the link wil trigger an AJAX call that will set a cookie on the visitor's device, if their browser allows it.
