@@ -11,7 +11,7 @@
  * the call is coming from the site's script.
  *
  * ------------------------------------------------------------------------------------------------------------------------------
- * -  NOTICE that this php script assumes you have a plugin called Cookie Notice plugin installed, to respect visitor's choice  -
+ * -  NOTICE that this php script assumes you have a plugin called Cookie Notice Plugin installed, to respect visitor's choice  -
  * -  to allow/disallow cookie creation. Don't forget to make changes to the code if you use another plugin or solution.        -
  * ------------------------------------------------------------------------------------------------------------------------------
  *
@@ -27,7 +27,7 @@ add_action( 'wp_ajax_nopriv_unsetlanguage' , 'cookie_connector_set_my_cookie' );
 
 
 /**
- * Set the cookie, check for security nonce first
+ * Set the cookie, always check for security nonce first
  * check for accepted cookie compliance from Cookie Notice plugin (we don't want to piss people off)
  *
  * Set the cookie using
@@ -38,9 +38,9 @@ add_action( 'wp_ajax_nopriv_unsetlanguage' , 'cookie_connector_set_my_cookie' );
  */
 function cookie_connector_set_my_cookie() {
 
-	// first check if this ajax call is coming from the site script,
-	// which has been provided with a nonce using the
-	// wp_localize_script function. If not, wp_die();
+	// Always make sure to check if this ajax call is coming from
+	// the site script first, which has been provided with a nonce
+	// using the wp_localize_script() function. IF NOT, wp_die();
 	//
 	if( ! check_ajax_referer( 'cookie-security-nonce' , 'security' ) ) {
 

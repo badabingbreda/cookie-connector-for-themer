@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Cookie Connector and Conditional Logic for Themer\n"
-"POT-Creation-Date: 2019-01-17 11:14+0100\n"
-"PO-Revision-Date: 2019-01-17 11:14+0100\n"
+"POT-Creation-Date: 2019-01-21 10:54+0100\n"
+"PO-Revision-Date: 2019-01-21 10:55+0100\n"
 "Last-Translator: Didou Schol <didou@badabing.nl>\n"
 "Language-Team: Didou Schol <didou@badabing.nl>\n"
 "Language: en_US\n"
@@ -26,51 +26,50 @@ msgid ""
 "Sorry, in orde to use Cookie Connector you will need Beaver Theme Builder + "
 "Beaver Themer."
 msgstr ""
+"Sorry, in orde to use Cookie Connector you will need Beaver Theme Builder + "
+"Beaver Themer."
 
-#: classes/class-cookie-connector.php:42 cookie-connector-ajax.php:38
+#: classes/class-cookie-connector.php:42 cookie-connector-ajax.php:42
 msgid "Cookie Connector"
-msgstr ""
+msgstr "Cookie Connector"
 
-#: classes/class-cookie-connector.php:50 cookie-connector-ajax.php:37
+#: classes/class-cookie-connector.php:50 cookie-connector-ajax.php:41
 msgid "Cookie Value"
-msgstr ""
+msgstr "Cookie Value"
 
 #: classes/class-cookie-connector.php:61 classes/class-cookie-connector.php:65
-#: cookie-connector-ajax.php:39
+#: cookie-connector-ajax.php:43
 msgid "Cookie Name"
-msgstr ""
+msgstr "Cookie Name"
 
 #: classes/class-cookie-connector.php:66
 msgid "Enter the name of the cookie that you want to get."
-msgstr ""
+msgstr "Enter the name of the cookie that you want to get."
 
-#: cookie-connector-ajax.php:40
-msgid "Value"
-msgstr ""
-
-#: cookie-connector-ajax.php:41
+#: cookie-connector-ajax.php:44
 msgid "Expired Return Value"
-msgstr ""
+msgstr "Expired Return Value"
 
-#: example/example-cookie-ajax-callback.php:55
+#: example/example-cookie-ajax-callback.php:76
 msgid "cookie not set, no value given. ( cv )"
-msgstr ""
+msgstr "cookie not set, no value given. ( cv )"
 
 #. Plugin Name of the plugin/theme
-msgid "Cookie Connector and Conditional Logic for Themer"
-msgstr ""
-
-#. Plugin URI of the plugin/theme
-#. Author URI of the plugin/theme
-msgid "https://www.badabing.nl"
-msgstr ""
+msgid "Cookie Connector for Themer"
+msgstr "Cookie Connector for Themer"
 
 #. Description of the plugin/theme
 msgid ""
 "Cookie Connector & Conditional Logic for Beaver Themer. Use Site Cookie for "
 "Queries and set Conditional Logic rules using Site Cookies."
 msgstr ""
+"Cookie Connector & Conditional Logic for Beaver Themer. Use Site Cookie for "
+"Queries and set Conditional Logic rules using Site Cookies."
 
 #. Author of the plugin/theme
 msgid "Didou Schol"
-msgstr ""
+msgstr "Didou Schol"
+
+#. Author URI of the plugin/theme
+msgid "https://www.badabing.nl"
+msgstr "https://www.badabing.nl"

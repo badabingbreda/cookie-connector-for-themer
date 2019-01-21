@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * @package cookie connector for themer
+ * @since 1.0.0
+ */
+
 add_action( 'wp_enqueue_scripts' , 'cookie_connector_secure_ajax', 10, 1 );
 add_action( 'bb_logic_enqueue_scripts' , 'cookie_connector_js_translations', 50, 1 );
 
@@ -41,7 +46,6 @@ function cookie_connector_js_translations() {
 		    'cookie_value' => __( 'Cookie Value' , 'cookie-connector' ),
 		    'cookie_connector' => __( 'Cookie Connector' , 'cookie-connector' ),
 		    'cookie_name' => __( 'Cookie Name' , 'cookie-connector' ),
-		    'cookie_value' => __( 'Value' , 'cookie-connector' ),
 		    'expired_return_value' => __( 'Expired Return Value' , 'cookie-connector' ),
 		]
 	  ]

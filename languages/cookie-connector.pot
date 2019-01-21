@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Cookie Connector and Conditional Logic for Themer\n"
-"POT-Creation-Date: 2019-01-17 11:14+0100\n"
+"POT-Creation-Date: 2019-01-21 10:54+0100\n"
 "PO-Revision-Date: 2019-01-17 10:35+0100\n"
 "Last-Translator: Didou Schol <didou@badabing.nl>\n"
 "Language-Team: Didou Schol <didou@badabing.nl>\n"
@@ -27,16 +27,16 @@ msgid ""
 "Beaver Themer."
 msgstr ""
 
-#: classes/class-cookie-connector.php:42 cookie-connector-ajax.php:38
+#: classes/class-cookie-connector.php:42 cookie-connector-ajax.php:42
 msgid "Cookie Connector"
 msgstr ""
 
-#: classes/class-cookie-connector.php:50 cookie-connector-ajax.php:37
+#: classes/class-cookie-connector.php:50 cookie-connector-ajax.php:41
 msgid "Cookie Value"
 msgstr ""
 
 #: classes/class-cookie-connector.php:61 classes/class-cookie-connector.php:65
-#: cookie-connector-ajax.php:39
+#: cookie-connector-ajax.php:43
 msgid "Cookie Name"
 msgstr ""
 
@@ -44,25 +44,16 @@ msgstr ""
 msgid "Enter the name of the cookie that you want to get."
 msgstr ""
 
-#: cookie-connector-ajax.php:40
-msgid "Value"
-msgstr ""
-
-#: cookie-connector-ajax.php:41
+#: cookie-connector-ajax.php:44
 msgid "Expired Return Value"
 msgstr ""
 
-#: example/example-cookie-ajax-callback.php:55
+#: example/example-cookie-ajax-callback.php:76
 msgid "cookie not set, no value given. ( cv )"
 msgstr ""
 
 #. Plugin Name of the plugin/theme
-msgid "Cookie Connector and Conditional Logic for Themer"
-msgstr ""
-
-#. Plugin URI of the plugin/theme
-#. Author URI of the plugin/theme
-msgid "https://www.badabing.nl"
+msgid "Cookie Connector for Themer"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -73,4 +64,8 @@ msgstr ""
 
 #. Author of the plugin/theme
 msgid "Didou Schol"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://www.badabing.nl"
 msgstr ""
