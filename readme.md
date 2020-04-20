@@ -3,7 +3,7 @@ Contributors: badabingbreda
 Donate link:
 Tags: connector, cookie, beaver builder, beaver themer
 Requires at least: 4.7
-Tested up to: 5.0.3
+Tested up to: 5.4
 Requires PHP: 5.6.3
 Stable tag: 1.0
 License: GPLv2 or later
@@ -66,7 +66,7 @@ On the server-side, you will need to add one or two ajax callbacks, depending if
     	    if ( !function_exists('cn_cookies_accepted') || !cn_cookies_accepted() ) {
     	        wp_die();
     	    }
-    		if ( !defined( 'DOING_AJAX' ) ) define( 'DOING_AJAX' , TRUE );
+     		if ( !defined( 'DOING_AJAX' ) ) define( 'DOING_AJAX' , TRUE );
 
     		// set your cookie name here
     		$cookie_name = 'mylanguage';
@@ -113,6 +113,14 @@ For instance, the javascript below will try to create the cookie. When successfu
 
 **version history**
 
-**1.0.1** Updated example code
+**1.1.0**
 
-**1.0.0** Initial release (January 18th, 2019)
+Updated the version because it works on WP 5.4 too
+
+**1.0.1**
+
+Updated example code
+
+**1.0.0**
+
+Initial release (January 18th, 2019)

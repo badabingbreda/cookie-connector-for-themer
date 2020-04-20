@@ -2,14 +2,14 @@
 /**
  Plugin Name: Cookie Connector for Themer
  Description: Cookie Connector & Conditional Logic for Beaver Themer. Use Site Cookie for Queries and set Conditional Logic rules using Site Cookies.
- Version: 1.0.1
+ Version: 1.1.0
  Author: Didou Schol
  Text Domain: cookie-connector
  Domain Path: /languages
  Author URI: https://www.badabing.nl
  */
 
-define( 'COOKIECONNECTOR_VERSION' 	, '1.0.1' );
+define( 'COOKIECONNECTOR_VERSION' 	, '1.1.0' );
 define( 'COOKIECONNECTOR_DIR'		, plugin_dir_path( __FILE__ ) );
 define( 'COOKIECONNECTOR_FILE'		, __FILE__ );
 define( 'COOKIECONNECTOR_URL' 		, plugins_url( '/', __FILE__ ) );
