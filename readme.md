@@ -3,9 +3,9 @@ Contributors: badabingbreda
 Donate link:
 Tags: connector, cookie, beaver builder, beaver themer
 Requires at least: 4.7
-Tested up to: 5.4
+Tested up to: 5.5.1
 Requires PHP: 5.6.3
-Stable tag: 1.0
+Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -112,6 +112,10 @@ For instance, the javascript below will try to create the cookie. When successfu
 
 
 **version history**
+
+**1.2.0**
+
+Removed admin_notice so that plugin can be used without Beaver Themer and Beaver Builder too (scripts), for ajax calls.
 
 **1.1.0**
 

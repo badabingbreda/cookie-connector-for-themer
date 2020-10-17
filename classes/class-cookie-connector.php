@@ -9,13 +9,13 @@ class cookie_connector {
 	public static function init() {
 
 		// check if Theme Builder / Beaver Themer is installed and actived
-		if ( !class_exists( 'FLThemeBuilder' ) ) {
-			add_action( 'admin_notices' , __CLASS__ . '::cookie_connector_admin_error_need_theme_builder' );
+		if ( class_exists( 'FLThemeBuilder' ) ) {
+			// add the actual field connector to themer
+			add_action( 'fl_page_data_add_properties' ,  __CLASS__ . '::add_cookie_connector' );
 			return false;
 		}
-
-		// add the actual field connector to themer
-		add_action( 'fl_page_data_add_properties' ,  __CLASS__ . '::add_cookie_connector' );
+		/* removed admin_notice, can be used without Themer for classes and script if needed */
+		// add_action( 'admin_notices' , __CLASS__ . '::cookie_connector_admin_error_need_theme_builder' );
 
 	}
 
